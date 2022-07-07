@@ -23,15 +23,19 @@
             <i class="el-icon-mobile-phone"></i>
             <span slot="title">{{ $T('UPLOAD_AREA') }}</span>
           </el-menu-item>
-          <el-menu-item index="upload">
+          <el-menu-item index="test">
+            <i class="el-icon-mobile-phone"></i>
+            <span slot="title">{{ $T('UPLOAD_AREA') }}</span>
+          </el-menu-item>
+          <!-- <el-menu-item index="upload">
             <i class="el-icon-upload"></i>
             <span slot="title">{{ $T('UPLOAD_AREA') }}</span>
           </el-menu-item>
           <el-menu-item index="gallery">
             <i class="el-icon-picture"></i>
             <span slot="title">{{ $T('GALLERY') }}</span>
-          </el-menu-item>
-          <el-submenu
+          </el-menu-item> -->
+          <!-- <el-submenu
             index="sub-menu"
           >
             <template slot="title">
@@ -46,7 +50,7 @@
                 :index="`picbeds-${item.type}`"
                 :key="item.type"
               >
-                <!-- <i :class="`el-icon-ui-${item.type}`"></i> -->
+                <i :class="`el-icon-ui-${item.type}`"></i>
                 <span slot="title">{{ item.name }}</span>
               </el-menu-item>
             </template>
@@ -58,7 +62,7 @@
           <el-menu-item index="plugin">
             <i class="el-icon-share"></i>
             <span slot="title">{{ $T('PLUGIN_SETTINGS') }}</span>
-          </el-menu-item>
+          </el-menu-item> -->
         </el-menu>
         <i class="el-icon-info setting-window" @click="openDialog"></i>
       </el-col>

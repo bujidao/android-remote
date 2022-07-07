@@ -85,6 +85,11 @@ export default new Router({
           component: () => import('@/pages/devices/list.vue')
         },
         {
+          path: '/test',
+          name: 'test',
+          component: () => import('@/pages/test/index.vue')
+        },
+        {
           path: 'setting',
           component: () => import(/* webpackChunkName: "setting" */ '@/pages/PicGoSetting.vue'),
           name: 'setting'

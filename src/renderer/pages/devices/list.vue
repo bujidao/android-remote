@@ -1,6 +1,6 @@
 <template>
   <div class="device-list">
-    <el-button @click="getDevicesList">获取设备列表</el-button>
+    <el-button @click="getDevicesList">获取本机ip</el-button>
     <pre>{{msg}}</pre>
     <ul>
       <li v-for="(device, index) in devicesList" :key="index">
@@ -22,14 +22,15 @@ export default {
   },
   methods: {
     getDevicesList () {
+      // exec('ipconfig', (error, ))
       const workerProcess = exec('ipconfig')
-      // workerProcess.stdout.on('data', function (data) {
-      //   this.msg = data
-      // })
+      workerProcess.stdout.on('data', function (data) {
+        this.msg = data
+      })
       // workerProcess.stderr.on('data', function (data) {
       //   this.msg = data
       // })
-      this.msg = workerProcess.stdout
+      this.msg = workerProcess
     }
   }
 }
