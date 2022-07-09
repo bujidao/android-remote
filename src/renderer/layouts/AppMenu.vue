@@ -19,7 +19,7 @@ import { Vue, Component } from 'vue-property-decorator'
 })
 export default class extends Vue {
   routes: any[] = [];
-  created () {
+  mounted () {
     this.getRoutes()
   }
 

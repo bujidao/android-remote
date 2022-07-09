@@ -31,6 +31,8 @@ export default class extends Vue {
 .app-main {
   color: #dcdcaa;
   padding: 20px;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 .app-fade{
   &-enter,

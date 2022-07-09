@@ -228,6 +228,12 @@ export default {
       lang = lang || 'zh-CN'
       i18n.setLanguage(lang)
     })
+
+    ipcMain.on('getAppPath', (evt: IpcMainEvent) => {
+      const appPath = app.getAppPath()
+      evt.sender.send('getAppPath', appPath)
+      evt.returnValue = appPath
+    })
   },
   dispose () {}
 }
