@@ -38,8 +38,12 @@ const config = {
           .add('module')
       },
       builderOptions: {
-        productName: 'PicGo',
-        appId: 'com.molunerfinn.picgo',
+        extraResources: {
+          from: './public/resources',
+          to: './'
+        },
+        productName: 'AndroidTools',
+        appId: 'com.bujidao.androidTool',
         publish: [
           {
             provider: 'github',

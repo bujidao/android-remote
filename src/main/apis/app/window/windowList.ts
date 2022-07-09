@@ -57,8 +57,8 @@ windowList.set(IWindowList.SETTING_WINDOW, {
   multiple: false,
   options () {
     const options: IBrowserWindowOptions = {
-      height: 450,
-      width: 800,
+      height: 650, // 450
+      width: 1000, // 800
       show: false,
       frame: true,
       center: true,
@@ -79,8 +79,8 @@ windowList.set(IWindowList.SETTING_WINDOW, {
     if (process.platform !== 'darwin') {
       options.show = false
       options.frame = false
-      options.backgroundColor = '#3f3c37'
-      options.transparent = false
+      options.backgroundColor = '#333333' // #3f3c37
+      options.transparent = true // false
       options.icon = `${__static}/logo.png`
     }
     return options
@@ -152,7 +152,8 @@ windowList.set(IWindowList.RENAME_WINDOW, {
     }
     if (process.platform !== 'darwin') {
       options.show = true
-      options.backgroundColor = '#3f3c37'
+      // options.backgroundColor = '#3f3c37'
+      options.backgroundColor = '#ffffff'
       options.autoHideMenuBar = true
       options.transparent = false
     }

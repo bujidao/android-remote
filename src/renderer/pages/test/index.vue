@@ -4,18 +4,11 @@
     <pre>{{err}}</pre>
     <pre>{{stdout}}</pre>
     <pre>{{stderr}}</pre>
-    <!-- <ul>
-      <li v-for="(device, index) in devicesList" :key="index">
-        {{ device }}
-      </li>
-    </ul> -->
   </div>
 </template>
 
 <script>
 const exec = require('child_process').exec
-// const iconv = require('iconv-lite')
-// const { Buffer } = require('buffer')
 export default {
   name: 'DevicesList',
   data () {
@@ -32,7 +25,7 @@ export default {
   methods: {
     getDevicesList () {
       exec(
-        'ipconfig',
+        'adb devices',
         {
           encoding: 'binary'
         },
@@ -42,16 +35,7 @@ export default {
           this.stderr = stderr
         }
       )
-      // const workerProcess = exec('ipconfig')
-      // workerProcess.stdout.on('data', function (data) {
-      //   this.msg = data
-      // })
-      // this.msg = workerProcess
     }
-    // redeocde (stdout) {
-    // const buf = new Buffer.from(stdout, this.binaryEncoding)
-    // return iconv.decode(buf, this.encoding)
-    // }
   }
 }
 </script>
